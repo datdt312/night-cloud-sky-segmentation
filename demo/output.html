@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<style>
+    .column {
+        padding: 10px;
+    }
+    
+    img {
+        border: 4px solid salmon;
+        margin: 5px;
+    }
+</style>
+
+<body>
+    <div class="row" style="padding: 100px; margin: 100px; padding-top: 20px; border: 2px solid orange">
+        <div class="column">
+            <img src="./output/original_image.png" alt="Snow" style="width:500px"> (a) Input image
+        </div>
+        <div class="column">
+            <img src="./output/ratio_image.png" alt="Forest" style="width:500px"> (b) Red-blue difference
+        </div>
+        <div class="column">
+            <img src="./output/slic_image.png" alt="Mountains" style="width:500px"> (c) Over-segmentation using superpixels
+        </div>
+        <div class="column">
+            <img src="./output/quantblock_image.png" alt="Mountains" style="width:500px"> (d) Indexed image using average red-blue difference of the superpixels
+        </div>
+
+        <div class="column">
+            <img src="./output/binary_image.png" alt="Mountains" style="width:500px"> (e) Final sky/cloud segmentation result
+        </div>
+    </div>
+
+    <div class="row" style="padding: 50px; margin: 100px; padding-top: 20px; border: 2px solid orange">
+        <div class="column">
+            <img src="./output/original_image.png" alt="Snow" style="width:500px">
+            <img src="./output/slic_image.png" alt="Mountains" style="width:500px">
+            <img src="./output/binary_image.png" alt="Mountains" style="width:500px">
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script type="text/javascript">
+</script>

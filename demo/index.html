@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <form ref='uploadForm' id='uploadForm' action='/upload' method='post' encType="multipart/form-data" style="padding:100px; margin: 100px; border: 2px solid black">
+        <input type="file" name="sampleFile" style="margin: 10px; border: 4px solid salmon" />
+        <input type='submit' value='Upload!' id="submitbtnid" />
+        <div class="spinner-border text-danger" role="status" hidden>
+            <span class="sr-only"></span>
+        </div>
+    </form>
+
+</body>
+
+</html>
+<script type="text/javascript">
+    $(document).off('click', '#submitbtnid')
+        .on('click', '#submitbtnid', (e) => {
+            $('.spinner-border').removeAttr('hidden');
+        });
+</script>

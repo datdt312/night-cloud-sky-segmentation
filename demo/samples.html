@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<style>
+    .column {
+        padding: 10px;
+    }
+    
+    img {
+        border: 4px solid salmon;
+        margin: 5px;
+    }
+</style>
+
+<body>
+    <div class="row" style="padding: 50px; margin: 100px; padding-top: 20px; border: 2px solid orange">
+        <div class="row">
+            <div class="col-4"><b>Original Images</b></div>
+            <div class="col-4"><b>GTmaps</b></div>
+            <div class="col-4"><b>Predicted GTmaps</b></div>
+        </div>
+        <div class="row" id="renderGridId">
+            <!-- <div class="column">
+                <img src="./output/original_image.png" alt="Snow" style="width:500px">
+                <img src="./output/original_image.png" alt="Snow" style="width:500px">
+                <img src="./output/original_image.png" alt="Snow" style="width:500px">
+            </div>
+            <div class="column">
+                <img src="./output/ratio_image.png" alt="Forest" style="width:500px">
+                <img src="./output/ratio_image.png" alt="Forest" style="width:500px">
+                <img src="./output/ratio_image.png" alt="Forest" style="width:500px">
+            </div>
+            <div class="column">
+                <img src="./output/slic_image.png" alt="Mountains" style="width:500px">
+                <img src="./output/slic_image.png" alt="Mountains" style="width:500px">
+                <img src="./output/slic_image.png" alt="Mountains" style="width:500px">
+            </div> -->
+        </div>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript">
+    $(function() {
+        sContent = "";
+        for (var i = 1; i <= 115; i++) {
+            var name = ("000" + i).substr(-3);
+            var imgName = './images/sample/images/' + name + '.jpg';
+            var gtmapName = './images/sample/GTmaps/' + name + '_GT.jpg';
+            console.log(imgName);
+            console.log(gtmapName);
+            sContent += `<div class="column">
+                            <img src="${imgName}" alt="Mountains" style="width:500px">
+                            <img src="${gtmapName}" alt="Mountains" style="width:500px">
+                            <img src="${gtmapName}" alt="Mountains" style="width:500px">
+                        </div>`
+        }
+        $('#renderGridId').html(sContent);
+    });
+</script>
