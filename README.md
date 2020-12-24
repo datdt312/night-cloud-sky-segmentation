@@ -1,4 +1,4 @@
-# Nighttime sky/cloud image segmentation
+# [Nighttime sky/cloud image segmentation](https://github.com/Soumyabrata/nighttime-imaging)
 
 With the spirit of reproducible research, this repository contains all the codes required to produce the results in the manuscript: S. Dev, F. M. Savoy, Y. H. Lee and S. Winkler, Nighttime sky/cloud image segmentation, *Proc. IEEE International Conference on Image Processing (ICIP)*, 2017. 
 
